@@ -13,12 +13,14 @@
 
 use PHPUnit\Util\Json;
 
+    
 Route::get('/', function () {
     return view('welcome');
 });
 
 Route::get('/api', function(){
-   return response($contents ="fine" , $status = 200 , $headers=[]);
+    $reslt = ["name" => "John"];
+   return response($contents = $resl = $reslt , $status = 200 , $headers=[]);
    
 });
 
