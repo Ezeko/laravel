@@ -13,8 +13,9 @@ class CreatePasswordResetsTable extends Migration
      */
     public function up()
     {
+        //change email length to maximum of 191 to allow migration
         Schema::create('password_resets', function (Blueprint $table) {
-            $table->string('email')->index();
+            $table->string('email',191)->index();
             $table->string('token');
             $table->timestamp('created_at')->nullable();
         });

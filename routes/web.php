@@ -19,7 +19,10 @@ Route::get('/', function () {
 });
 
 Route::get('/api', function(){
-    $reslt = ["name" => "John"];
+    $reslt = ["name" => "John",
+                "class" =>" k.g",
+                "Location"=> "Lokoja"
+];
    return response($contents = $resl = $reslt , $status = 200 , $headers=[]);
    
 });
