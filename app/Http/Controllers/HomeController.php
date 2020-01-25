@@ -29,7 +29,9 @@ class HomeController extends Controller
         $post->user_id =$request->user_id;
         $post->post_created_at = $request->post_crreated_at;
 
-        $post::save();
+        $post->save();
+
+        return redirect('/posts');
 
 
     }

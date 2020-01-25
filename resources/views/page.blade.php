@@ -9,10 +9,11 @@
 <body>
 
         <header>
-        <form>
+        <form method="POST" action="/create_post">
                 <input type="text" name="title" placeholder="Your post's title">
                 <textarea type="text" col="42" name="post" placeholder="Your post's content"></textarea>
                 <input type="hidden" name="username" value="Ezeko">
+                <input type="hidden" name="user_id" value="1">
                 <input type="hidden" name="post_created_at" value="{{ now()}}">
                 {{@csrf_field()}}
                 <button>Create post</button>
