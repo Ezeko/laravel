@@ -23,11 +23,11 @@ Route::get('/api', function(){
    
 });
 
-Route::get('/posts','HomeController@page');
+Route::get('/posts','PostsController@page');
 
-Route::post('/create_post', 'HomeController@create_post');
+Route::post('/create_post', 'PostsController@create_post');
 
-Route::get('/post/{id}', 'HomeController@view')->where('id', '[0-9]+');
+Route::get('/post/{id}', 'PostsController@view')->where('id', '[0-9]+');
 
 
-Route::match(['get', 'delete'],'/delete/{id}', 'HomeController@delete_post')->where('id', '[0-9]+');
+Route::match(['get', 'delete'],'/delete/{id}', 'PostsController@delete_post')->where('id', '[0-9]+');

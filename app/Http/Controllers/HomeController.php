@@ -13,41 +13,4 @@ class HomeController extends Controller
         return view('welcome');
     }
 
-    function page(){
-        $posts = post::all()->sortByDesc('post_created_at');
-        return view('page',[ 'posts' => $posts]);
-
-    }
-
-    function create_post(Request $request){
-
-        $post = new post();
-
-        $post->title = $request->title;
-        $post->username = $request->username;
-        $post->post = $request->post;
-        $post->user_id =$request->user_id;
-        $post->post_created_at = $request->post_crreated_at;
-
-        $post->save();
-
-        return redirect('/posts');
-
-
-    }
-
-    function view($id){
-
-        $post = post::findOrFail($id);
-
-        return view('post',['post'=> $post]);
-
-    }
-
-    function delete_post($id){
-        post::find($id)
-        ->delete();
-
-        return redirect('/posts');
-    }
 }
