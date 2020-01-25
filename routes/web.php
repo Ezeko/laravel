@@ -26,3 +26,5 @@ Route::get('/api', function(){
 });
 
 route::get('/a','HomeController@page');
+
+route::post('create_post', 'HomeController@create_post');
