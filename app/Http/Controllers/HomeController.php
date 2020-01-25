@@ -14,7 +14,7 @@ class HomeController extends Controller
     }
 
     function page(){
-        $posts = post::all();
+        $posts = post::all()->sortByDesc('post_created_at');
         return view('page',[ 'posts' => $posts]);
 
     }
@@ -42,5 +42,12 @@ class HomeController extends Controller
 
         return view('post',['post'=> $post]);
 
+    }
+
+    function delete_post($id){
+        post::find($id)
+        ->delete();
+
+        return redirect('/posts');
     }
 }

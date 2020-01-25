@@ -31,19 +31,35 @@
             background: greenyellow;
             text-align: center;
             margin-top: 2%;
+            margin-left: 45%;
         }
         input{
-            width: 80%;
+            width: 60%;
             margin-bottom: 2%;
         }
         textarea{
             width: 60%;
             height: 100px;
-            margin-right: 40%;
+           
         }
-        form{
-            border-bottom: black 22px;
-            border-bottom: 
+       #form{
+            border-bottom: thick 22px;
+            text-align: center;
+        }
+        .post{
+            text-align: center;
+            
+            
+        }
+        #pos{
+            height: 170px;
+            width:100%;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+            margin-bottom: 2%;
+            padding: 5%;
+        }
+        h1{
+            font-size: 300%;
         }
     </style>
 </head>

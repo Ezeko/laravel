@@ -8,7 +8,7 @@
 
 <body>
 
-        <header>
+        <div id="form">
         <form method="POST" action="/create_post">
                 <!--{{date_default_timezone_set('Africa/Lagos')}}-->
                 <input type="text" name="title" placeholder="Your post's title">
@@ -19,15 +19,16 @@
                 {{@csrf_field()}}
                 <button>Create post</button>
             </form>
-        </nav>
+            <hr />
+</div>
                 @foreach($posts as $post)
                 <div class="post">
-                    <ul>
-                        <li>{{$post->title}}</li>
-                        <p>{{ $post->post_created_at->diffForHumans()  }}</p>
+                    <div id="pos">
+                        <h1>{{$post->title}}</h1>
+                        <h6>{{ $post->post_created_at->diffForHumans()  }}</h6>
                         <a href="/post/{{$post->id}}">view</a>
                         
-                    </ul>
+                    </div>
                 </div>
                 @endforeach
 
