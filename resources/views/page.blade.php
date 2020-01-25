@@ -21,12 +21,11 @@
             </form>
         </nav>
                 @foreach($posts as $post)
-                <div>
+                <div class="post">
                     <ul>
                         <li>{{$post->title}}</li>
-                        <p>{{$post->post}}</p>
-                        <p>Posted By: {{$post->username}}</p>
                         <p>{{ $post->post_created_at->diffForHumans()  }}</p>
+                        <a href="/post/{{$post->id}}">view</a>
                         
                     </ul>
                 </div>

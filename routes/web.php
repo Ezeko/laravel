@@ -28,3 +28,5 @@ Route::get('/api', function(){
 Route::get('/posts','HomeController@page');
 
 Route::post('/create_post', 'HomeController@create_post');
+
+Route::get('/post/{id}', 'HomeController@view');

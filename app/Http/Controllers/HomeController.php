@@ -35,4 +35,12 @@ class HomeController extends Controller
 
 
     }
+
+    function view($id){
+
+        $post = post::findOrFail($id);
+
+        return view('post',['post'=> $post]);
+
+    }
 }
