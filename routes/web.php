@@ -14,9 +14,7 @@
 use PHPUnit\Util\Json;
 
     
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@index');
 
 Route::get('/api', function(){
     $reslt = ["name" => "John",
@@ -27,3 +25,4 @@ Route::get('/api', function(){
    
 });
 
+route::get('/a','HomeController@page');

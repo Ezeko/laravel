@@ -83,6 +83,11 @@
                 <div class="title m-b-md">
                     Laravel
                 </div>
+                <p> Time is {{date('Y-m-d H:i')}}</p>
+               
+
+
+        
 
                 <div class="links">
                     <a href="https://laravel.com/docs">Docs</a>
