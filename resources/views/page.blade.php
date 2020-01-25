@@ -11,6 +11,11 @@
         <header>
         <form>
                 <input type="text" name="title" placeholder="Your post's title">
+                <textarea type="text" col="42" name="post" placeholder="Your post's content"></textarea>
+                <input type="hidden" name="username" value="Ezeko">
+                <input type="hidden" name="post_created_at" value="{{ now()}}">
+                {{@csrf_field()}}
+                <button>Create post</button>
             </form>
         </nav>
                 @foreach($posts as $post)

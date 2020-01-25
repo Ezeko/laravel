@@ -25,6 +25,6 @@ Route::get('/api', function(){
    
 });
 
-route::get('/posts','HomeController@page');
+Route::get('/posts','HomeController@page');
 
-route::post('create_post', 'HomeController@create_post');
+Route::post('create_post', 'HomeController@create_post');
