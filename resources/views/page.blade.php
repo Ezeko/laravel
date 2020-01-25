@@ -1,6 +1,6 @@
 @extends('blend')
 
-@section('title', 'Home page')
+@section('title', 'Blog :: Ezekoconcept')
 
 @section('contents')
 
