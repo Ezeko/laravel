@@ -23,7 +23,7 @@ class PostsController extends Controller
         $post->username = $request->username;
         $post->post = $request->post;
         $post->user_id =$request->user_id;
-        $post->post_created_at = $request->post_crreated_at;
+        $post->post_created_at = $request->post_created_at;
 
         $post->save();
 

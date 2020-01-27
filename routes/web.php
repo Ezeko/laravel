@@ -29,5 +29,8 @@ Route::post('/create_post', 'PostsController@create_post');
 
 Route::get('/post/{id}', 'PostsController@view')->where('id', '[0-9]+');
 
+Route::put('/update', 'PostUpdateController@update_post');
 
 Route::match(['get', 'delete'],'/delete/{id}', 'PostsController@delete_post')->where('id', '[0-9]+');
+
+Route::get('/edit/{id}', 'PostUpdateController@find_post')->where('id', '[0-9]+');
