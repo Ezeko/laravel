@@ -33,6 +33,6 @@ Route::match(['get', 'put'],'/update/{id}', 'PostUpdateController@update_post');
 
 Route::match(['get', 'delete'],'/delete/{id}', 'PostsController@delete_post')->where('id', '[0-9]+');
 
-Route::match(['get', 'put'],'/likes/{id}', 'likesController@update_page_likes')->where('id', '[0-9]+');
+Route::match(['get', 'put'],'/likes', 'likesController@update_page_likes')->where('id', '[0-9]+');
 
 Route::get('/edit/{id}', 'PostUpdateController@find_post')->where('id', '[0-9]+');
