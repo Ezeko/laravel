@@ -33,7 +33,7 @@
                             <input type="hidden" name="user_id" value="13" />
                             @METHOD('PUT')
                             {{ @csrf_field()}}
-                            <input name="like" type="submit" value="👍"> 
+                            <input name="like" type="submit" value="❤"> 
                         </form> 
                             <div style="margin-left:3%;">
                              @if(($post->likes)> 0) 

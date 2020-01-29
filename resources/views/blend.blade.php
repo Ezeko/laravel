@@ -78,7 +78,7 @@
            border: 0;
     
         }
-        input[name="like"]:visited{
+        input[name="like"]:target{
             border: 0;
         }
         .like{

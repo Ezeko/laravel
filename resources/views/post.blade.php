@@ -10,7 +10,8 @@
                         <h2>{{$post->post}}</h2>
                         <h3>Posted By: {{$post->username}}</h3>
                         <h6>{{ $post->post_created_at->diffForHumans()  }}</h6>
-                        <a href="/posts"> Back</a> <a href="/edit/{{$post->id}}">Update Post</a> <a href="#"> 👍 </a>
+                        <a href="/posts"> Back</a> <a href="/edit/{{$post->id}}">Update Post</a> 
+                        <a href="#"> ❤ </a>
                         <form method="get" action="/delete/{{$post->id}}">
                        
                         @method('DELETE')
