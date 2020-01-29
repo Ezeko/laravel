@@ -26,21 +26,21 @@
                     <div id="pos">
                         <h1><strong>{{$post->title}}</strong></h1>
                         <h6>{{ $post->created_at->diffForHumans()  }}</h6>
+                        <div class="like">
                         <a href="/post/{{$post->id}}">view</a>
-                        <p>
                         <form method="POST" action="/likes">
                             <input type="hidden" name="post_id" value="{{$post->id}}" >
                             <input type="hidden" name="user_id" value="13" />
                             @METHOD('PUT')
                             {{ @csrf_field()}}
-                            <button type="submit"> 👍 </button>
+                            <input name="like" type="submit" value="👍"> 
                         </form> 
-                        
+                            <div style="margin-left:3%;">
                              @if(($post->likes)> 0) 
                                 {{$post->likes}}
                             @endif
-                            
-                        </p>
+                            </div>
+                        </div>
                         
                     </div>
                 </div>

@@ -71,6 +71,18 @@
             font-display: auto;
             font-stretch: auto;
         }
+        input[name="like"]{
+            width: auto;
+            margin-left: 33%;
+           background-color: white;
+           border: 0;
+    
+        }
+        .like{
+            display: flex;
+            text-align: center;
+            margin-left: 45%;
+        }
     </style>
 </head>
     <body>
