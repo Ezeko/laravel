@@ -10,7 +10,7 @@ class PostsController extends Controller
     //controllers that handles various requests
     
     function page(){
-        $posts = post::all()->sortByDesc('post_created_at');
+        $posts = post::all()->sortByDesc('created_at');
         return view('page',[ 'posts' => $posts]);
 
     }

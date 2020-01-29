@@ -60,7 +60,16 @@
             background: white;
         }
         h1{
-            font-size: 300%;
+            font-size: 200%;
+        }
+        a{
+            text-decoration-line: none;
+            text-decoration-style: none;
+        }
+        input[name="post"]{
+            height: 150px;
+            font-display: auto;
+            font-stretch: auto;
         }
     </style>
 </head>

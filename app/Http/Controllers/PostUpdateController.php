@@ -18,16 +18,13 @@ class PostUpdateController extends Controller
     }
 
 
-    function update_post(Request $request){
-       $post = new post;
-       
-       $post->title = $request->title;
-        $post->username = $request->username;
-        $post->post = $request->post;
-        $post->user_id =$request->user_id;
-        $post->updated_at= $request->updated_at;
+    function update_post($id, Request $request){
+     $id_post = post::findorfail($id);    
 
-        post::where('id', '=', '$request->user_id')->update(['title'=>$post->title ]);
+        post::where('id', '=', $id_post->id)
+        ->update(['title'=>$request->title,
+            'post' => $request->post
+        ]);
 
         return redirect('/posts');
     }

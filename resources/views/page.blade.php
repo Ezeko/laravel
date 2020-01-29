@@ -24,9 +24,15 @@
                 @foreach($posts as $post)
                 <div class="post">
                     <div id="pos">
-                        <h1>{{$post->title}}</h1>
-                        <h6>{{ $post->post_created_at->diffForHumans()  }}</h6>
-                        <a href="/post/{{$post->id}}">view</a>
+                        <h1><strong>{{$post->title}}</strong></h1>
+                        <h6>{{ $post->created_at->diffForHumans()  }}</h6>
+                        <a href="/post/{{$post->id}}">view</a> 
+                        <p><a href="/likes/{{$post->id}}"> 👍 </a>
+                             @if(($post->likes)> 0) 
+                                {{$post->likes}}
+                            @endif
+                            
+                        </p>
                         
                     </div>
                 </div>
