@@ -78,6 +78,9 @@
            border: 0;
     
         }
+        input[name="like"]:visited{
+            border: 0;
+        }
         .like{
             display: flex;
             text-align: center;
